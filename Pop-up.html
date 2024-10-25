@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Notification</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+    #main{
+        justify-content: center;
+        text-align: center;
+        margin-top: 30%;
+    }
+    #btn{
+        margin-bottom: 15px;
+        color: blue;
+        padding: 5px;
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    #pop{
+        border: 1px solid black;
+        width: 200px;
+        border-radius: 20px;
+        visibility: hidden;
+    }
+    #hd{
+        color: blue;
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <div id="main">
+        <button id="btn">Click to See</button><br>
+        <div id="pop">
+            <h3 id="hd">Welcome</h3>
+            <p>Welcome to digital world.</p>
+        </div>
+    </div>
+<script>
+    let btn = document.querySelector("#btn");
+    let pop = document.querySelector("#pop");
+    btn.addEventListener("click", () => {
+        pop.style.visibility= "visible";
+        setTimeout(() => {           
+            pop.style.visibility= "hidden";
+        },3000)
+    })
+</script>
+</body>
+</html>
